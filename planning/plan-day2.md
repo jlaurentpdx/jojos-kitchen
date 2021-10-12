@@ -7,7 +7,7 @@
 * Open yesterday's repo in VSCode
 * Create a new branch:
     git checkout -b lab-07-cart
-* Add new files and folders:
+* Add new files and folders - there are steps below for each of these, but you can save time by making them all at once:
     * In root directory:
         * `utils.js`
     * New `cart/` folder:
@@ -15,7 +15,7 @@
         * `render-cart.js` _(reference Julie's demo file cart/cart.js)_
     * New `data/` folder:
         * `cart-data.js`
-        * _Optional_: Move your product file (_example_ `sodas.js`) into this folder
+        * _Optional_: Move your product file (_example_ `sodas.js`) into this folder - note that you will need to update your imports in app.js for any files that you relocate
     * Add to `styles` folder:
         * `cart.css`
 
