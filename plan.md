@@ -22,7 +22,7 @@
 
     ACP
 
-* Step 4 (in products.js)
+* Step 4 (in app.js)
     * Import data and renderProduct DOM function
     * Identify List element for products to be placed
     * Loop through data by passing to the renderProduct function and storing it in a variable, then append to the top-level list element

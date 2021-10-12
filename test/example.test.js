@@ -7,7 +7,7 @@ const test = QUnit.test;
 test('renderSpice should return HTML snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div id="1" class="spice-card"><h2>Cinnamon</h2><img src="./assets/cinnamon.jpg"><p>Organic fine-ground cinnamon. Add a dash for that Taco Bell-desert twist... twist.</p><p>In stock: 3</p><p>Price: $5</p></div>`;
+    const expected = `<li id="1" class="spice-card"><h2>Cinnamon</h2><img src="./assets/cinnamon.jpg"><p>Organic fine-ground cinnamon. Add a dash for that Taco Bell-desert twist... twist.</p><p>In stock: 3</p><p>Price: $5</p></li>`;
     
     //Act 
     // Call the function you're testing and set the result to a const

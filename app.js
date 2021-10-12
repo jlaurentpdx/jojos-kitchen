@@ -1,8 +1,9 @@
-// import functions and grab DOM elements
+import { renderSpice } from './renderSpices.js';
+import { spices } from './spices.js';
 
-// initialize global state
+const spiceList = document.getElementById('spice-list');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+for (let spice of spices) {
+    const spiceCard = renderSpice(spice);
+    spiceList.append(spiceCard);
+}

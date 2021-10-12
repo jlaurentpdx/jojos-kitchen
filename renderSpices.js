@@ -1,5 +1,5 @@
 export function renderSpice(spice) {
-    const spiceCard = document.createElement('div');
+    const spiceCard = document.createElement('li');
     spiceCard.setAttribute('id', spice.id);
     spiceCard.classList.add('spice-card');
 
