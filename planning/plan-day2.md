@@ -48,10 +48,10 @@
 ### Step 2
 
 * Make a new folder called `data/`
-* in data/, make a new file called `cart.js`
+* in data/, make a new file called `cart-data.js`
 * Export an array literal:
     ```js
-    const cart = [{ items in the cart }]
+    export const cart = [{ items in the cart }]
     ```
 
     ACP
