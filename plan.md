@@ -15,7 +15,7 @@
 * Step 3: 
     * Create a function that generates the HTML elements for each product dynamically by passing in the object - this will essentially copy the format of our static product
 * Step 3b: _Test_
-    * Inspect HTML on the page, copy as a global variable, ref as var.outerHTML - remove whitespace
+    * Inspect HTML on the page, copy as a global variable, ref as temp1.outerHTML - remove whitespace
     * Copy object product data for the example and pass as input to function
     * Create the static example using JavaScript - start by creating the top level elememt first (`<li>`?)
     * Test should pass
