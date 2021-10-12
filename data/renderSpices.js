@@ -13,9 +13,6 @@ export function renderSpice(spice) {
     description.textContent = spice.description;
     description.classList.add('description');
 
-    const quantity = document.createElement('p');
-    quantity.textContent = `In stock: ${spice.quantity}`;
-
     const price = document.createElement('p');
     price.textContent = `Price: $${(spice.price.toFixed(2))}`;
 
@@ -23,7 +20,6 @@ export function renderSpice(spice) {
         spiceHeader, 
         img, 
         description,
-        quantity,
         price
     );
 
