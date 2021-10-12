@@ -61,8 +61,8 @@
 * Make a file called `utils.js` in the root directory
 * In `utils.js`, create a function called `findById`
     ```js
-    export const findById(id, array) {
-        for (item of array) {
+    export function findById(id, items) {
+        for (let item of items) {
             if (item.id === id) return item; 
             else return null; 
         }
