@@ -16,6 +16,7 @@
     * New `data/` folder:
         * `cart-data.js`
         * _Optional_: Move your product file (_example_ `sodas.js`) into this folder
+        
     * Add to `styles` folder:
         * `cart.css`
 

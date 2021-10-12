@@ -17,7 +17,7 @@ export function renderSpice(spice) {
     quantity.textContent = `In stock: ${spice.quantity}`;
 
     const price = document.createElement('p');
-    price.textContent = `Price: $${spice.price}`;
+    price.textContent = `Price: $${(spice.price.toFixed(2))}`;
 
     spiceCard.append(
         spiceHeader, 
