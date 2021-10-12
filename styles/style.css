@@ -31,7 +31,9 @@ h1, h2, footer {
 
 p {
     font-family: 'Merriweather', serif;
-    text-align: left;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
 }
 
 h1 {
@@ -53,21 +55,26 @@ h2 {
 }
 
 img {
-    width: 160px;
+    width: 220px;
+    border: 1px double black;
 }
 
 .spice-card {
     font-size: 80%;
     background-color: papayawhip;
-    width: 350px;
+    width: 260px;
     border: 10px double black;
     border-radius: 10px;
 }
 
+.description {
+    font-style: italic;
+    font-weight: lighter;
+}
+
 #spice-list {
     display: grid;
-    grid-auto-columns: 350px;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     grid-gap: 10px;
     margin: 10px;
     font-size: 1rem;

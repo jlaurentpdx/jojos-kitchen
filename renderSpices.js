@@ -11,6 +11,7 @@ export function renderSpice(spice) {
 
     const description = document.createElement('p');
     description.textContent = spice.description;
+    description.classList.add('description');
 
     const quantity = document.createElement('p');
     quantity.textContent = `In stock: ${spice.quantity}`;
