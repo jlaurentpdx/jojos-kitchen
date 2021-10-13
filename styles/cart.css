@@ -1,0 +1,25 @@
+h1 {
+    font-size: 2rem;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    font-family: 'Merriweather', serif;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border: 2px dotted darksalmon;
+}
+
+th {
+    background-color: darksalmon;
+    color: white;
+}
+
+td {
+    background-color: papayawhip;
+    color: black;    
+    padding: 5px;
+}
