@@ -19,6 +19,9 @@ const tdOrderTotal = document.getElementById('order-total');
 tdOrderTotal.textContent = toUSD(orderTotal);
 
 const orderButton = document.getElementById('order-button');
+
+if (cart.length <= 0) orderButton.disabled = true;
+
 orderButton.addEventListener('click', () => {
     clearCart();
     window.location.replace('..');
