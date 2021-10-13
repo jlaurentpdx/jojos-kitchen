@@ -7,7 +7,7 @@
 * Open yesterday's repo in VSCode
 * Create a new branch:
     git checkout -b lab-07-cart
-* Add new files and folders:
+* Add new files and folders - there are steps below for each of these, but you can save time by making them all at once:
     * In root directory:
         * `utils.js`
     * New `cart/` folder:
@@ -15,8 +15,7 @@
         * `render-cart.js` _(reference Julie's demo file cart/cart.js)_
     * New `data/` folder:
         * `cart-data.js`
-        * _Optional_: Move your product file (_example_ `sodas.js`) into this folder
-        
+        * _Optional_: Move your product file (_example_ `sodas.js`) into this folder - note that you will need to update your imports in app.js for any files that you relocate
     * Add to `styles` folder:
         * `cart.css`
 
@@ -49,10 +48,10 @@
 ### Step 2
 
 * Make a new folder called `data/`
-* in data/, make a new file called `cart.js`
+* in data/, make a new file called `cart-data.js`
 * Export an array literal:
     ```js
-    const cart = [{ items in the cart }]
+    export const cart = [{ items in the cart }]
     ```
 
     ACP
@@ -62,8 +61,8 @@
 * Make a file called `utils.js` in the root directory
 * In `utils.js`, create a function called `findById`
     ```js
-    export const findById(id, array) {
-        for (item of array) {
+    export function findById(id, items) {
+        for (let item of items) {
             if (item.id === id) return item; 
             else return null; 
         }
