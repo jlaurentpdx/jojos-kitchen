@@ -1,4 +1,4 @@
-import { renderSpice } from './data/renderSpices.js';
+import { renderSpice } from './render-spices.js';
 import { spices } from './data/spices.js';
 
 const spiceList = document.getElementById('spice-list');

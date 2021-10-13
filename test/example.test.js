@@ -1,6 +1,8 @@
-import { renderSpice } from '../data/renderSpices.js';
+import { renderSpice } from '../render-spices.js';
 import { spices } from '../data/spices.js';
+import { renderLineItems } from '../render-line-items.js';
 import { findById } from '../utils.js';
+import { cart } from '../data/cart-data.js';
 
 const test = QUnit.test;
 
@@ -22,5 +24,14 @@ test('findById should return the item matching the id', (expect) => {
     };
     const actual = findById('1', spices);
     expect.deepEqual(actual, expected);
+});
+
+test('renderLineItems should produce a table row with line item info', (expect) => {
+    const spiceData = findById(cart[0].id, spices);
+
+    const expected = `<tr><td>Cinnamon</td><td>5</td><td>6</td><td>30</td></tr>`;
+    const actual = renderLineItems(cart[0], spiceData).outerHTML;
+
+    expect.equal(actual, expected);
 });
 
