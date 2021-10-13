@@ -18,3 +18,32 @@ export function calculateOrderTotal(cart, productList) {
 export function toUSD(value) {
     return value.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
 }
+
+export function getCart() {
+    const cartString = localStorage.getItem('CART') || '[]';
+    const cart = JSON.parse(cartString);
+    return cart;
+}
+
+export function clearCart() {
+    return localStorage.removeItem('CART');
+}
+
+export function addItem(id) {
+    const cart = getCart();
+    const cartItem = findById(id, cart);
+    let newItemQty = 0;
+
+    if (cartItem) {
+        cartItem.qty++;
+    } else { 
+        const newItem = { id: id, qty: 1 };
+        cart.push(newItem);
+        newItemQty++;
+    } 
+
+    const stringCart = JSON.stringify(cart);
+    localStorage.setItem('CART', stringCart);
+    
+    return (!newItemQty) ? cartItem.qty : newItemQty;
+}

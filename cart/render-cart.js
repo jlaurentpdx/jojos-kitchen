@@ -1,7 +1,8 @@
 import { spices } from '../data/spices.js';
-import { cart } from '../data/cart-data.js';
-import { findById, calculateOrderTotal, toUSD } from '../utils.js';
+import { findById, calculateOrderTotal, getCart, toUSD, clearCart } from '../utils.js';
 import { renderLineItems } from '../render-line-items.js';
+
+const cart = getCart();
 
 const tbody = document.getElementById('table-body');
 
@@ -16,3 +17,9 @@ const orderTotal = calculateOrderTotal(cart, spices);
 const tdOrderTotal = document.getElementById('order-total');
 
 tdOrderTotal.textContent = toUSD(orderTotal);
+
+const orderButton = document.getElementById('order-button');
+orderButton.addEventListener('click', () => {
+    clearCart();
+    window.location.replace('..');
+});
