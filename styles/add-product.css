@@ -1,0 +1,44 @@
+form {
+    margin: 0 auto;
+    width: 500px;
+    padding: 1rem;
+    border: 2px double black;
+    border-radius: 15px;
+    background-color: papayawhip;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li + li {
+    margin-top: 1rem;
+}
+
+label {
+    display: inline-block;
+    font-family: 'Merriweather', serif;
+    width: 120px;
+    text-align: right;
+}
+
+input, textarea {
+    font-size: 1rem;
+    font-family: 'Merriweather', serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    vertical-align: top;
+}
+
+input:focus, textarea:focus {
+    vertical-align: top;
+}
+
+button {
+    font-family: 'Merriweather', serif;
+    font-size: larger;
+    margin-left: .5rem;
+}
