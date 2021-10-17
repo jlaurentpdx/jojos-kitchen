@@ -1,3 +1,5 @@
+import { spices } from './data/spices.js';
+
 export function findById(id, items){
     for (let item of items) {
         if (item.id === id) return item;
@@ -117,10 +119,26 @@ export function renderSpice(spice) {
 
 export function addProduct(product) {
     const productString = localStorage.getItem('PRODUCTS') || '[]';
-    const productsList = JSON.parse(productString);
+    const productList = JSON.parse(productString);
 
-    productsList.push(product);
+    productList.push(product);
 
-    const stringProducts = JSON.stringify(productsList);
-    localStorage.setItem('PRODUCTS', stringProducts);
+    const stringProduct = JSON.stringify(productList);
+    localStorage.setItem('PRODUCTS', stringProduct);
+}
+
+export function seedAndGetSpices() {
+    const productString = localStorage.getItem('PRODUCTS') || '[]';
+    let productList = JSON.parse(productString);
+
+    if (productString === '[]') productList = spices;
+
+    const stringProduct = JSON.stringify(productList);
+    localStorage.setItem('PRODUCTS', stringProduct);
+
+    return productList;
+}
+
+export function clearProducts() {
+    return localStorage.removeItem('PRODUCTS');
 }

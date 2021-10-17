@@ -15,12 +15,12 @@
 * Replace instances of { spices } with a localStorage solution
     * If productList exists on localStorage, then return that list, else if productList is null then seed localStorage from spices.js 
 
-* In utils.js, add and test function `addProduct(product)` that puts the passed object into localStorage
+<!-- * In utils.js, add and test function `addProduct(product)` that puts the passed object into localStorage
     * Retrieve existing array
     * array.push(product)
     * Re-save array into localStorage
 * Test should add a product, then retrieve all products and assert `deepEqual` productList[-1] === product
     * Call `addProduct`
-    * Check localStorage to see if product was added
+    * Check localStorage to see if product was added -->
 
 * *STRETCH*: Remove a Product
