@@ -1,15 +1,10 @@
 import { spices } from '../data/spices.js';
 import * as utils from '../utils.js';
 
-const test = QUnit.test;
- 
 const fakeCart = [{ id: '1', qty: 3 }, { id: '4', qty: 2 }];
 
-//  fakeCart contents:
-//      id: Cinnamon, Cloves
-//      price: 5, 5
-//      total: 15, 10
-//      orderTotal: 25
+const test = QUnit.test;
+ 
 
 test('renderSpice should return HTML snippet', (expect) => {
     utils.clearCart();
