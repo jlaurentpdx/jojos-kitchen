@@ -1,6 +1,5 @@
 import { spices } from '../data/spices.js';
-import { findById, calculateOrderTotal, getCart, toUSD, clearCart } from '../utils.js';
-import { renderLineItems } from '../render-line-items.js';
+import { findById, calculateOrderTotal, getCart, toUSD, clearCart, renderLineItems } from '../utils.js';
 
 const cart = getCart();
 

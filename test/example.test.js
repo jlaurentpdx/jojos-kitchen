@@ -1,7 +1,5 @@
-import { renderSpice } from '../render-spices.js';
 import { spices } from '../data/spices.js';
-import { renderLineItems } from '../render-line-items.js';
-import { findById, getCart, addItem, clearCart, calculateOrderTotal } from '../utils.js';
+import { findById, getCart, addItem, clearCart, calculateOrderTotal, renderLineItems, renderSpice } from '../utils.js';
 
 const test = QUnit.test;
  

@@ -1,6 +1,5 @@
-import { renderSpice } from './render-spices.js';
 import { spices } from './data/spices.js';
-import { getCart } from './utils.js';
+import { getCart, renderSpice } from './utils.js';
 
 const spiceList = document.getElementById('spice-list');
 
