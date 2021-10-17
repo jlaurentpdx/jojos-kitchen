@@ -1,5 +1,5 @@
 import { spices } from '../data/spices.js';
-import { findById, getCart, addItem, clearCart, calculateOrderTotal, renderLineItems, renderSpice } from '../utils.js';
+import { findById, getCart, addItem, clearCart, calculateOrderTotal, renderLineItems, renderSpice, addProduct } from '../utils.js';
 
 const test = QUnit.test;
  
@@ -29,7 +29,6 @@ test('findById should return the item matching the id', (expect) => {
         name: 'Cinnamon',
         img: '../jojos-kitchen/assets/cinnamon.jpg',
         description: 'Organic fine-ground cinnamon. Add a dash for that Taco Bell-desert twist... twist.', 
-        sizeInOz: 2.45,
         price: 5
     };
     const actual = findById('1', spices);
@@ -108,4 +107,13 @@ test('clearCart should empty the cart and return an empty array', (expect) => {
     const expected = [];
 
     expect.deepEqual(cart, expected);
+});
+
+test('addProduct should store an item in local storage at the end of a localStorage PRODUCTS array', (expect) => {
+    const newProduct = addProduct(spices[0]);
+    const productString = localStorage.getItem('PRODUCTS') || '[]';
+    const productsList = JSON.parse(productString);
+
+    const expected = newProduct;
+    expect.deepEqual(productsList[-1], expected);
 });

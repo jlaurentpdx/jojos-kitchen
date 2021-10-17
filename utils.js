@@ -114,3 +114,13 @@ export function renderSpice(spice) {
 
     return spiceCard;
 }
+
+export function addProduct(product) {
+    const productString = localStorage.getItem('PRODUCTS') || '[]';
+    const productsList = JSON.parse(productString);
+
+    productsList.push(product);
+
+    const stringProducts = JSON.stringify(productsList);
+    localStorage.setItem('PRODUCTS', stringProducts);
+}

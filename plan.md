@@ -1,7 +1,7 @@
-* Make an admin folder
+<!-- * Make an admin folder
     * In admin/, create an `index.html` file 
         * This HTML file should include a form with all the necessary data for adding a product
-        * Form needs id
+        * Form needs id -->
     * In admin/, create `product-entry.js`
         * Reference form element 
         * submit.addEventListener
@@ -10,7 +10,7 @@
         * `new Product` from formData - using `form.get`
         * Call `addProduct` with the object
         * Reset the form
-* Create a nav bar in the header to navigate to all pages
+<!-- * Create a nav bar in the header to navigate to all pages -->
 
 * Replace instances of { spices } with a localStorage solution
     * If productList exists on localStorage, then return that list, else if productList is null then seed localStorage from spices.js 
