@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/add-product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Pacifico&display=swap" rel="stylesheet">  
+    <title>Jojo's Kitchen Admin: Add Product</title>
+</head>
+<body>
+    <header>
+        <h1>Jojo's Kitchen</h1>
+        <nav>
+            <a href="/admin/index.html">Add Product</a> |
+            <a href="../index.html">Store</a> |
+            <a href="../cart/index.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <p id="new-product-alert"></p>
+        <form id="new-product-form" method="get">
+            <ul>
+                <li>
+                    <label for="id">ID:</label>
+                    <input type="number" name="id">
+                </li>
+                <li>
+                    <label for="product">Product:</label>
+                    <input type="text" name="product">
+                </li>
+                <li>
+                    <label for="img">Image URL:</label>
+                    <input type="url" name="img">
+                </li>
+                <li>
+                    <label for="description">Description:</label>
+                    <textarea name="description" cols="30" rows="10"></textarea>
+                </li>
+                <li>
+                    <label for="price">Price USD:</label>
+                    <input type="number" name="price">
+                </li>
+                <li class="button">
+                    <button type="submit">Submit</button>
+                </li>
+            </ul>
+        </form>
+
+        <button id="clear-store">Reset Store Items?</button>
+
+    </main>
+    <footer>
+        -codo by jojo, 2021
+    </footer>
+    <script type="module" src="./add-product.js"></script>
+</body>
+</html>
