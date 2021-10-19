@@ -128,15 +128,15 @@ export function addProduct(product) {
 }
 
 export function getProducts() {
-    const productString = localStorage.getItem('PRODUCTS') || '[]';
-    let productList = JSON.parse(productString);
+    let productString = localStorage.getItem('PRODUCTS');
+    const productList = JSON.parse(productString);
 
-    if (productString === '[]') productList = spices;
+    if (!productList) {
+        const spicesString = JSON.stringify(spices);
+        localStorage.setItem('PRODUCTS', spicesString);
+    }
 
-    const stringProduct = JSON.stringify(productList);
-    localStorage.setItem('PRODUCTS', stringProduct);
-
-    return productList;
+    return productList || spices;
 }
 
 export function clearProducts() {

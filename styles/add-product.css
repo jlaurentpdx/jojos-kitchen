@@ -1,5 +1,6 @@
 form {
     margin: 0 auto;
+    margin-top: 20px;
     width: 500px;
     padding: 1rem;
     border: 2px double black;
@@ -41,4 +42,14 @@ button {
     font-family: 'Merriweather', serif;
     font-size: larger;
     margin-left: .5rem;
+}
+
+p {
+    text-align: center;
+    margin: auto;    
+    width: 200px;
+    background: linen;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-style: italic;
 }
