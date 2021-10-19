@@ -1,6 +1,6 @@
 import * as utils from '../utils.js';
 
-const spices = utils.seedAndGetSpices();
+const spices = utils.getProducts();
 const cart = utils.getCart();
 
 const tbody = document.getElementById('table-body');

@@ -127,7 +127,7 @@ export function addProduct(product) {
     localStorage.setItem('PRODUCTS', stringProduct);
 }
 
-export function seedAndGetSpices() {
+export function getProducts() {
     const productString = localStorage.getItem('PRODUCTS') || '[]';
     let productList = JSON.parse(productString);
 

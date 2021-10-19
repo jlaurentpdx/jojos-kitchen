@@ -124,19 +124,19 @@ test('clearProducts should remove PRODUCTS from local storage and return an empt
     expect.deepEqual(productList, expected);
 });
 
-test('getAndSeedProducts should retrieve an array of existing products from localStorage', (expect) => {
+test('getProducts should retrieve an array of existing products from localStorage', (expect) => {
     utils.clearProducts();
     utils.addProduct({ id: '0', name: 'Cayenne' });
-    const productList = utils.seedAndGetSpices();
+    const productList = utils.getProducts();
 
     const expected = [{ id: '0', name: 'Cayenne' }];
 
     expect.deepEqual(productList, expected);
 });
 
-test('getAndSeedProducts should seed PRODUCTS in localStorage from spices.js if PRODUCTS is empty', (expect) => {
+test('getProducts should seed PRODUCTS in localStorage from spices.js if PRODUCTS is empty', (expect) => {
     utils.clearProducts();
-    const productList = utils.seedAndGetSpices();
+    const productList = utils.getProducts();
 
     const expected = spices;
 
