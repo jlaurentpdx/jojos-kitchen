@@ -23,5 +23,5 @@ if (cart.length <= 0) orderButton.disabled = true;
 
 orderButton.addEventListener('click', () => {
     utils.clearCart();
-    window.location.replace('..');
+    window.location.replace('../index.html');
 });

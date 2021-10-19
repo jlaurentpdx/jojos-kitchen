@@ -22,28 +22,28 @@
         </nav>
     </header>
     <main>
-        <p id="new-product-alert">Add a Product</p>
+        <p id="new-product-alert"></p>
         <form id="new-product-form" method="get">
             <ul>
                 <li>
                     <label for="id">ID:</label>
-                    <input type="number" id="id">
+                    <input type="number" name="id">
                 </li>
                 <li>
                     <label for="product">Product:</label>
-                    <input type="text" id="product">
+                    <input type="text" name="product">
                 </li>
                 <li>
                     <label for="img">Image URL:</label>
-                    <input type="url" id="img">
+                    <input type="url" name="img">
                 </li>
                 <li>
-                    <label for="desc">Description:</label>
-                    <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+                    <label for="description">Description:</label>
+                    <textarea name="description" cols="30" rows="10"></textarea>
                 </li>
                 <li>
                     <label for="price">Price USD:</label>
-                    <input type="number">
+                    <input type="number" name="price">
                 </li>
                 <li class="button">
                     <button type="submit">Submit</button>
@@ -51,9 +51,12 @@
             </ul>
         </form>
 
+        <button id="clear-store">Reset Store Items?</button>
+
     </main>
     <footer>
-
+        -codo by jojo, 2021
     </footer>
+    <script type="module" src="./add-product.js"></script>
 </body>
 </html>

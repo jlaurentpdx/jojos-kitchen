@@ -1,7 +1,8 @@
-import { addProduct } from '../utils.js';
+import { addProduct, clearCart, clearProducts } from '../utils.js';
 
 const newProductForm = document.getElementById('new-product-form');
 const newProductAlert = document.getElementById('new-product-alert');
+const clearStore = document.getElementById('clear-store');
 
 newProductForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -9,14 +10,19 @@ newProductForm.addEventListener('submit', (e) => {
     
     const newSpice = {
         id: data.get('id'),
-        product: data.get('product'),
+        name: data.get('product'),
         img: data.get('img'),
-        description: data.get('desc'),
+        description: data.get('description'),
         price: Number(data.get('price'))
     };
 
     addProduct(newSpice);
 
-    newProductAlert.textContent = 'Product added!';
-    alert('new product added!');
+    newProductAlert.textContent = 'New product added!';
+});
+
+clearStore.addEventListener('click', () => {
+    clearCart();
+    clearProducts();
+    alert('Store and cart items have been reset. Be sure to add new products!');
 });
