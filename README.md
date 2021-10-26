@@ -1,25 +1,27 @@
-# Alchemy Bootstrap Template
+## Lab 09 Goals: 
+<!-- * Make an admin folder
+    * In admin/, create an `index.html` file 
+        * This HTML file should include a form with all the necessary data for adding a product
+        * Form needs id -->
+* In admin/, create `product-entry.js`
+    * Reference form element 
+    * submit.addEventListener
+    * event.preventDefault() **???**
+    * `new FormData` object passing in form
+    * `new Product` from formData - using `form.get`
+    * Call `addProduct` with the object
+    * Reset the form
+<!-- * Create a nav bar in the header to navigate to all pages -->
 
-## Making a plan
+* Replace instances of { spices } with a localStorage solution
+    * If productList exists on localStorage, then return that list, else if productList is null then seed localStorage from spices.js 
 
-(bolded steps are mandatory, unbolded are for more advanced projects)
+<!-- * In utils.js, add and test function `addProduct(product)` that puts the passed object into localStorage
+    * Retrieve existing array
+    * array.push(product)
+    * Re-save array into localStorage
+* Test should add a product, then retrieve all products and assert `deepEqual` productList[-1] === product
+    * Call `addProduct`
+    * Check localStorage to see if product was added -->
 
-1) **Make a drawing of your app. Simple "wireframes"**
-2) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-3) **For each HTML element ask: Why do I need this?**
-4) Ask which of out HTML elements are hard coded, and which are dynamically generated?
-5) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How"**
-6) Is there some state we need to initialize?
-7) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?**
-8) **Think about how to validate each of your steps**
-9) Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
-10) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
-11) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
-
-
-## To Run Cypress Tests
-* `npm install`
-* `npm test`
-* Cypress will open -- you should then click "run <#> integration spec(s)"
-    ![](cypress.png)
-* Make sure all tests pass
+* *STRETCH*: Remove a Product

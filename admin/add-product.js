@@ -19,6 +19,7 @@ newProductForm.addEventListener('submit', (e) => {
     addProduct(newSpice);
 
     newProductAlert.textContent = 'New product added!';
+    newProductForm.reset();
 });
 
 clearStore.addEventListener('click', () => {
